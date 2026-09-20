@@ -1,6 +1,6 @@
 # 🧾 Monthly Billing Flow Dashboard
 
-> **Live HTML dashboard powered by Google Apps Script — reads Excel data directly from Google Drive and visualizes billing trends, business performance, and month-over-month analysis in real time**
+> **Live HTML dashboard powered by Google Apps Script, reads Excel data directly from Google Drive and visualizes billing trends, business performance, and month-over-month analysis in real time**
 
 ---
 
@@ -44,12 +44,12 @@ Excel (.xlsx)   ──────►  Code.gs                ──────
 ```
 
 **Key technical details:**
-- Backend (`Code.gs`) uses **Google Drive API** to locate the latest `.xlsx` in a specified folder
-- Converts it to a temporary Google Sheet to extract data, then **deletes the temp copy**
-- Compresses data with **gzip** and encodes as base64 — sent inline to the page
-- **Smart caching** — only re-reads the file when it has actually changed (uses file ID + last modified timestamp)
-- Frontend (`Index.html`) decompresses the data in the browser using the **DecompressionStream API**
-- Full **XLSX parser built from scratch** in JavaScript — reads shared strings, inline strings, sparse rows, serial dates, and columns beyond Z
+* Backend (`Code.gs`) uses **Google Drive API** to locate the latest `.xlsx` in a specified folder
+* Converts it to a temporary Google Sheet to extract data, then **deletes the temp copy**
+* Compresses data with **gzip** and encodes as base64, sent inline to the page
+* **Smart caching**, only re-reads the file when it has actually changed (uses file ID + last modified timestamp)
+* Frontend (`Index.html`) decompresses the data in the browser using the **DecompressionStream API**
+* Full **XLSX parser built from scratch** in JavaScript, reads shared strings, inline strings, sparse rows, serial dates, and columns beyond Z
 
 ---
 
@@ -70,32 +70,32 @@ Excel (.xlsx)   ──────►  Code.gs                ──────
 - **Top Businesses by Billed Amount** — Horizontal bar chart, top 10
 
 ### 📋 Analysis Tables
-- **Bill Creation Analysis** — Business × Month matrix with MoM % change (↑/↓)
-- **Billed Amount Analysis** — Business × Month matrix with MoM % change
-- **Billing Timing Analysis** — Date of Service vs Bill Created Month cross-tab
-- **Monthly Summary** — Month-by-month totals with diff %
-- **Business Summary** — All businesses with total bills and billed amount
+ **Bill Creation Analysis** : Business × Month matrix with MoM % change (↑/↓)
+ **Billed Amount Analysis** : Business × Month matrix with MoM % change
+ **Billing Timing Analysis** : Date of Service vs Bill Created Month cross-tab
+ **Monthly Summary** : Month-by-month totals with diff %
+ **Business Summary** : All businesses with total bills and billed amount
 
 ### 💡 Auto Insights
 Dynamic analysis section that auto-calculates:
-- Peak bill volume month
-- Peak billed amount month
-- Top performing business
-- Latest month movement vs prior month
-- Average bill amount
-- Business concentration %
+ Peak bill volume month
+ Peak billed amount month
+ Top performing business
+ Latest month movement vs prior month
+ Average bill amount
+ Business concentration %
 
 ### 🎛️ Filters
-- Date range (From / To)
-- Business dropdown
-- Business search (live text filter)
-- Reset all filters button
+* Date range (From / To)
+* Business dropdown
+* Business search (live text filter)
+* Reset all filters button
 
 ### ⬇️ Export Options
-- **Upload Excel** — Load a different file for the session
-- **Capture Dashboard (PDF)** — Browser print to PDF with full table expansion
-- **Download Template** — Get the exact Excel template with required columns
-- **Export Data** — Download filtered data as CSV
+ **Upload Excel** — Load a different file for the session
+ **Capture Dashboard (PDF)** — Browser print to PDF with full table expansion
+ **Download Template** — Get the exact Excel template with required columns
+ **Export Data** — Download filtered data as CSV
 
 ---
 
