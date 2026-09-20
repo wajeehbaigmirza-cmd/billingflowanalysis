@@ -1,4 +1,4 @@
-# 💰 Monthly Billing Flow Dashboard
+# 🧾 Monthly Billing Flow Dashboard
 
 > **Live HTML dashboard powered by Google Apps Script — reads Excel data directly from Google Drive and visualizes billing trends, business performance, and month-over-month analysis in real time**
 
@@ -21,11 +21,11 @@ This is a fully custom, browser-based analytics dashboard built without any BI t
 ## 🎯 Business Problem
 
 The operations team needed a centralized billing dashboard to:
-- Track monthly bill creation volume and billed amounts
-- Monitor business-wise billing performance
-- Analyze month-over-month trends and identify dips
-- Understand billing timing (when bills are created vs date of service)
-- Export filtered data for reporting
+* Track monthly bill creation volume and billed amounts
+* Monitor business-wise billing performance
+* Analyze month-over-month trends and identify dips
+* Understand billing timing (when bills are created vs date of service)
+* Export filtered data for reporting
 
 ---
 
@@ -135,12 +135,12 @@ Dynamic analysis section that auto-calculates:
 
 ### Steps
 
-1. **Open Google Apps Script** — go to [script.google.com](https://script.google.com) → New Project
-2. **Add Code.gs** — paste the backend code into `Code.gs`
-3. **Add Index.html** — click `+` → HTML file → name it `Index` → paste the frontend code
+1. **Open Google Apps Script** : go to [script.google.com](https://script.google.com) → New Project
+2. **Add Code.gs** : paste the backend code into `Code.gs`
+3. **Add Index.html** : click `+` → HTML file → name it `Index` → paste the frontend code
 4. **Enable Drive API** — click `+` next to Services → add **Drive API**
-5. **Set folder name** — change `FOLDER_NAME = 'Dashboard'` to match your Drive folder
-6. **Deploy** — click `Deploy` → `New deployment` → type: `Web app`
+5. **Set folder name** : change `FOLDER_NAME = 'Dashboard'` to match your Drive folder
+6. **Deploy** : click `Deploy` → `New deployment` → type: `Web app`
    - Execute as: **Me**
    - Who has access: **Anyone**
 7. **Copy the web app URL** — share it with your team
@@ -149,21 +149,16 @@ Dynamic analysis section that auto-calculates:
 - Add `?refresh=1` to the URL to force a fresh read from Drive
 - Or simply update the `.xlsx` file — the dashboard auto-detects changes via cache stamp
 
----
-
-## 📸 Dashboard Preview
-
-![Monthly Billing Flow Dashboard](./dashboard_preview.png)
 
 ---
 
 ## 💡 Key Technical Highlights
 
-- **Zero external libraries** — charts, XLSX parser, ZIP reader all built from scratch in vanilla JS
-- **Serverless architecture** — no database, no server, no hosting costs
-- **Smart caching** — file ID + last-modified timestamp used as cache key; avoids unnecessary re-reads
-- **PDF export** — expands all scrollable tables before printing for a complete PDF capture
-- **Offline-capable** — embeds last-known data as a fallback if Drive is unreachable
+- **Zero external libraries** : charts, XLSX parser, ZIP reader all built from scratch in vanilla JS
+- **Serverless architecture** : no database, no server, no hosting costs
+- **Smart caching** : file ID + last-modified timestamp used as cache key; avoids unnecessary re-reads
+- **PDF export** : expands all scrollable tables before printing for a complete PDF capture
+- **Offline-capable** : embeds last-known data as a fallback if Drive is unreachable
 
 ---
 
@@ -176,4 +171,4 @@ Dynamic analysis section that auto-calculates:
 ## 👤 Author
 
 **Mirza Wajeeh Baig** — Data Analyst
-[![GitHub](https://img.shields.io/badge/GitHub-mirzawajeehbaig-181717?style=flat&logo=github)](https://github.com/mirzawajeehbaig)
+[![GitHub](https://img.shields.io/badge/GitHub-mirzawajeehbaig-181717?style=flat&logo=github)](https://github.com/wajeehbaigmirza-cmd)
